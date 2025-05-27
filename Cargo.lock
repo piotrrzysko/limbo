@@ -1820,6 +1820,7 @@ dependencies = [
  "limbo_ipaddr",
  "limbo_macros",
  "limbo_percentile",
+ "limbo_pragma",
  "limbo_regexp",
  "limbo_series",
  "limbo_sqlite3_parser",
@@ -1924,6 +1925,14 @@ dependencies = [
 
 [[package]]
 name = "limbo_percentile"
+version = "0.0.21"
+dependencies = [
+ "limbo_ext",
+ "mimalloc",
+]
+
+[[package]]
+name = "limbo_pragma"
 version = "0.0.21"
 dependencies = [
  "limbo_ext",

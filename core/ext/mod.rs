@@ -208,6 +208,10 @@ impl Connection {
         if unsafe { !limbo_csv::register_extension_static(&mut ext_api).is_ok() } {
             return Err("Failed to register csv extension".to_string());
         }
+        #[cfg(feature = "pragma")]
+        if unsafe { !limbo_pragma::register_extension_static(&mut ext_api).is_ok() } {
+            return Err("Failed to register pragma extension".to_string());
+        }
         #[cfg(feature = "fs")]
         {
             let vfslist = add_builtin_vfs_extensions(Some(ext_api)).map_err(|e| e.to_string())?;

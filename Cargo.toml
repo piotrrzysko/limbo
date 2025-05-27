@@ -16,6 +16,7 @@ members = [
     "extensions/crypto",
     "extensions/csv",
     "extensions/percentile",
+    "extensions/pragma",
     "extensions/regexp",
     "extensions/series",
     "extensions/tests",
@@ -47,6 +48,7 @@ limbo_ext_tests = { path = "extensions/tests", version = "0.0.21" }
 limbo_ipaddr = { path = "extensions/ipaddr", version = "0.0.21" }
 limbo_macros = { path = "macros", version = "0.0.21" }
 limbo_percentile = { path = "extensions/percentile", version = "0.0.21" }
+limbo_pragma = { path = "extensions/pragma", version = "0.0.21" }
 limbo_regexp = { path = "extensions/regexp", version = "0.0.21" }
 limbo_series = { path = "extensions/series", version = "0.0.21" }
 limbo_sqlite3_parser = { path = "vendored/sqlite3-parser", version = "0.0.21" }

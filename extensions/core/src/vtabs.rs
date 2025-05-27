@@ -510,7 +510,7 @@ impl Statement {
     ///    let row = stmt.get_row();
     ///    println!("row: {:?}", row);
     ///```
-    pub fn get_row(&mut self) -> &[Value] {
+    pub fn get_row(&self) -> &[Value] {
         unsafe { (*self.0).get_row() }
     }
 

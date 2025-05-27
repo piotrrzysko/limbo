@@ -14,7 +14,7 @@ name = "limbo_core"
 path = "lib.rs"
 
 [features]
-default = ["fs", "uuid", "time", "json", "static"]
+default = ["fs", "uuid", "time", "json", "static", "pragma"]
 fs = ["limbo_ext/vfs"]
 json = []
 uuid = ["limbo_uuid/static"]
@@ -30,6 +30,7 @@ testvfs = ["limbo_ext_tests/static"]
 static = ["limbo_ext/static"]
 fuzz = []
 csv = ["limbo_csv/static"]
+pragma = ["limbo_pragma/static"]
 
 [target.'cfg(target_os = "linux")'.dependencies]
 io-uring = { version = "0.7.5", optional = true }
@@ -70,6 +71,7 @@ limbo_ipaddr = { workspace = true, optional = true, features = ["static"] }
 limbo_completion = { workspace = true, optional = true, features = ["static"] }
 limbo_ext_tests = { workspace = true, optional = true, features = ["static"] }
 limbo_csv = { workspace = true, optional = true, features = ["static"] }
+limbo_pragma = { workspace = true, optional = true, features = ["static"] }
 miette = "7.6.0"
 strum = { workspace = true }
 parking_lot = "0.12.3"
